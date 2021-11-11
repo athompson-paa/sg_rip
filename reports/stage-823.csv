@@ -1,0 +1,19 @@
+Group-Name,Group-ID,In/Out,Protocol,Port,Source/Destination, Description
+default,sg-6338063d
+,,Inbound
+,,Outbound
+default,sg-a29528dd
+,,Inbound
+,,,All,All,sg-a29528dd
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-bf21beff
+,,Inbound
+,,,All,All,sg-bf21beff
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-bcf5c2df
+,,Inbound
+,,,All,All,sg-bcf5c2df
+,,Outbound
+,,,All,All, 0.0.0.0/0

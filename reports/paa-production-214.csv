@@ -1,0 +1,366 @@
+Group-Name,Group-ID,In/Out,Protocol,Port,Source/Destination, Description
+nodes.prod.k8s.paainfra.io,sg-008a747e734a4965b
+,,Inbound
+,,,All,All,sg-008a747e734a4965b
+,,,All,All,sg-03a68302b3ede6419
+,,,All,All,sg-0e4431d01127924d1
+,,,All,All,sg-0f9ddbdfb2c8d0f62
+,,,tcp,22,sg-0134ddb5c92a3a18a
+,,Outbound
+,,,All,All, 0.0.0.0/0
+bastion.prod.k8s.paainfra.io,sg-0134ddb5c92a3a18a
+,,Inbound
+,,,tcp,22,0.0.0.0/0
+,,,tcp,22,sg-04c8068ea7afb2857
+,,Outbound
+,,,All,All, 0.0.0.0/0
+windows-hchb-sg,sg-02eb11ca09c851c30
+,,Inbound
+,,,tcp,3389,131.226.34.254/32
+,,,tcp,3389,24.182.104.39/32
+,,,tcp,3389,99.127.146.246/32
+,,,tcp,3389,131.226.36.57/32
+,,,tcp,3389,47.189.73.111/32
+,,,tcp,3389,47.185.217.237/32
+,,,tcp,3389,10.255.8.9/32
+,,,tcp,3389,24.27.102.159/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+masters.prod.k8s.paainfra.io,sg-03a68302b3ede6419
+,,Inbound
+,,,tcp,65535,sg-008a747e734a4965b
+,,,tcp,4000,sg-008a747e734a4965b
+,,,All,All,sg-03a68302b3ede6419
+,,,tcp,22,sg-0134ddb5c92a3a18a
+,,,udp,65535,sg-008a747e734a4965b
+,,,tcp,2379,sg-008a747e734a4965b
+,,,tcp,443,sg-0cff740a59d7022f8
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-03eab4539eb488c46
+,,Inbound
+,,Outbound
+bastion-elb.prod.k8s.paainfra.io,sg-04c8068ea7afb2857
+,,Inbound
+,,,tcp,22,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-06626828f3aa80657
+,,Inbound
+,,,All,All,sg-06626828f3aa80657
+,,Outbound
+,,,All,All, 0.0.0.0/0
+wireguard-connector,sg-06ad5c24ab577c1ea
+,,Inbound
+,,,tcp,22,131.226.34.254/32
+,,,tcp,22,131.226.36.57/32
+,,,tcp,22,66.69.180.5/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-0800ae8d09a156621
+,,Inbound
+,,Outbound
+default,sg-0ae5f66b9a0f2a881
+,,Inbound
+,,Outbound
+api-elb.prod.k8s.paainfra.io,sg-0cff740a59d7022f8
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a8350cbf8c91511e993f20229d9106bc,sg-0e4431d01127924d1
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+anna-prod-rds,sg-0ea1e8ec1365dced5
+,,Inbound
+,,,tcp,5432,172.19.0.0/16
+,,,tcp,5432,172.20.62.168/32
+,,,tcp,5432,172.30.2.0/24
+,,,tcp,5432,10.89.0.0/16
+,,,tcp,5432,sg-008a747e734a4965b
+,,,tcp,5432,sg-0134ddb5c92a3a18a
+,,,tcp,5432,sg-06ad5c24ab577c1ea
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-aa17426b43cf111ec89c20290501d541,sg-0f9ddbdfb2c8d0f62
+,,Inbound
+,,,tcp,9090,54.174.1.14/32
+,,,tcp,9090,35.169.241.94/32
+,,,tcp,9090,54.236.156.180/32
+,,,tcp,9090,131.226.36.57/32
+,,,tcp,9090,131.226.34.254/32
+,,,tcp,9090,52.3.176.165/32
+,,,icmp,4,35.169.241.94/32
+,,,icmp,4,54.236.156.180/32
+,,,icmp,4,54.174.1.14/32
+,,,icmp,4,131.226.34.254/32
+,,,icmp,4,131.226.36.57/32
+,,,icmp,4,52.3.176.165/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+launch-wizard-1,sg-0045a8d61a80b5b4b
+,,Inbound
+,,,tcp,22,47.190.60.88/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+masters.dev.k8s.paainfra.io,sg-013a5905294eb8cf5
+,,Inbound
+,,,tcp,65535,sg-073ee518753a453aa
+,,,tcp,4000,sg-073ee518753a453aa
+,,,All,All,sg-013a5905294eb8cf5
+,,,tcp,22,sg-0e9f36fbbe3c9a8bb
+,,,udp,65535,sg-073ee518753a453aa
+,,,tcp,2379,sg-073ee518753a453aa
+,,,tcp,443,sg-06357b2f903139b6c
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a5bb81079cb2111e9b4a2068013402cc,sg-044120391978d2fc6
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+api-elb.dev.k8s.paainfra.io,sg-06357b2f903139b6c
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+nodes.dev.k8s.paainfra.io,sg-073ee518753a453aa
+,,Inbound
+,,,All,All,sg-013a5905294eb8cf5
+,,,All,All,sg-073ee518753a453aa
+,,,All,All,sg-0da2bea752ddee9cc
+,,,tcp,22,sg-0e9f36fbbe3c9a8bb
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-07b5ab204c6e99909
+,,Inbound
+,,Outbound
+bastion-elb.dev.k8s.paainfra.io,sg-09f501317d9e3481c
+,,Inbound
+,,,tcp,22,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-add6fdb63cb6411e997ec02665088a8b,sg-0d600ce8382eafbd0
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a9132bb6ccb6711e9b4a2068013402cc,sg-0da2bea752ddee9cc
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a4629abcbcb1f11e9b4a2068013402cc,sg-0e4940ca77df7b25f
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+bastion.dev.k8s.paainfra.io,sg-0e9f36fbbe3c9a8bb
+,,Inbound
+,,,tcp,22,sg-09f501317d9e3481c
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-ab9a037cecb1e11e9b4a2068013402cc,sg-0f67e711c305dca96
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+Group-Name,Group-ID,In/Out,Protocol,Port,Source/Destination, Description
+default,sg-6338063d
+,,Inbound
+,,Outbound
+Group-Name,Group-ID,In/Out,Protocol,Port,Source/Destination, Description
+nodes.prod.k8s.paainfra.io,sg-008a747e734a4965b
+,,Inbound
+,,,All,All,sg-008a747e734a4965b
+,,,All,All,sg-03a68302b3ede6419
+,,,All,All,sg-0e4431d01127924d1
+,,,All,All,sg-0f9ddbdfb2c8d0f62
+,,,tcp,22,sg-0134ddb5c92a3a18a
+,,Outbound
+,,,All,All, 0.0.0.0/0
+bastion.prod.k8s.paainfra.io,sg-0134ddb5c92a3a18a
+,,Inbound
+,,,tcp,22,0.0.0.0/0
+,,,tcp,22,sg-04c8068ea7afb2857
+,,Outbound
+,,,All,All, 0.0.0.0/0
+windows-hchb-sg,sg-02eb11ca09c851c30
+,,Inbound
+,,,tcp,3389,131.226.34.254/32
+,,,tcp,3389,24.182.104.39/32
+,,,tcp,3389,99.127.146.246/32
+,,,tcp,3389,131.226.36.57/32
+,,,tcp,3389,47.189.73.111/32
+,,,tcp,3389,47.185.217.237/32
+,,,tcp,3389,10.255.8.9/32
+,,,tcp,3389,24.27.102.159/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+masters.prod.k8s.paainfra.io,sg-03a68302b3ede6419
+,,Inbound
+,,,tcp,65535,sg-008a747e734a4965b
+,,,tcp,4000,sg-008a747e734a4965b
+,,,All,All,sg-03a68302b3ede6419
+,,,tcp,22,sg-0134ddb5c92a3a18a
+,,,udp,65535,sg-008a747e734a4965b
+,,,tcp,2379,sg-008a747e734a4965b
+,,,tcp,443,sg-0cff740a59d7022f8
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-03eab4539eb488c46
+,,Inbound
+,,Outbound
+bastion-elb.prod.k8s.paainfra.io,sg-04c8068ea7afb2857
+,,Inbound
+,,,tcp,22,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-06626828f3aa80657
+,,Inbound
+,,,All,All,sg-06626828f3aa80657
+,,Outbound
+,,,All,All, 0.0.0.0/0
+wireguard-connector,sg-06ad5c24ab577c1ea
+,,Inbound
+,,,tcp,22,131.226.34.254/32
+,,,tcp,22,131.226.36.57/32
+,,,tcp,22,66.69.180.5/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-0800ae8d09a156621
+,,Inbound
+,,Outbound
+default,sg-0ae5f66b9a0f2a881
+,,Inbound
+,,Outbound
+api-elb.prod.k8s.paainfra.io,sg-0cff740a59d7022f8
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a8350cbf8c91511e993f20229d9106bc,sg-0e4431d01127924d1
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+anna-prod-rds,sg-0ea1e8ec1365dced5
+,,Inbound
+,,,tcp,5432,172.19.0.0/16
+,,,tcp,5432,172.20.62.168/32
+,,,tcp,5432,172.30.2.0/24
+,,,tcp,5432,10.89.0.0/16
+,,,tcp,5432,sg-008a747e734a4965b
+,,,tcp,5432,sg-0134ddb5c92a3a18a
+,,,tcp,5432,sg-06ad5c24ab577c1ea
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-aa17426b43cf111ec89c20290501d541,sg-0f9ddbdfb2c8d0f62
+,,Inbound
+,,,tcp,9090,54.174.1.14/32
+,,,tcp,9090,35.169.241.94/32
+,,,tcp,9090,54.236.156.180/32
+,,,tcp,9090,131.226.36.57/32
+,,,tcp,9090,131.226.34.254/32
+,,,tcp,9090,52.3.176.165/32
+,,,icmp,4,35.169.241.94/32
+,,,icmp,4,54.236.156.180/32
+,,,icmp,4,54.174.1.14/32
+,,,icmp,4,131.226.34.254/32
+,,,icmp,4,131.226.36.57/32
+,,,icmp,4,52.3.176.165/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+launch-wizard-1,sg-0045a8d61a80b5b4b
+,,Inbound
+,,,tcp,22,47.190.60.88/32
+,,Outbound
+,,,All,All, 0.0.0.0/0
+masters.dev.k8s.paainfra.io,sg-013a5905294eb8cf5
+,,Inbound
+,,,tcp,65535,sg-073ee518753a453aa
+,,,tcp,4000,sg-073ee518753a453aa
+,,,All,All,sg-013a5905294eb8cf5
+,,,tcp,22,sg-0e9f36fbbe3c9a8bb
+,,,udp,65535,sg-073ee518753a453aa
+,,,tcp,2379,sg-073ee518753a453aa
+,,,tcp,443,sg-06357b2f903139b6c
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a5bb81079cb2111e9b4a2068013402cc,sg-044120391978d2fc6
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+api-elb.dev.k8s.paainfra.io,sg-06357b2f903139b6c
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+nodes.dev.k8s.paainfra.io,sg-073ee518753a453aa
+,,Inbound
+,,,All,All,sg-013a5905294eb8cf5
+,,,All,All,sg-073ee518753a453aa
+,,,All,All,sg-0da2bea752ddee9cc
+,,,tcp,22,sg-0e9f36fbbe3c9a8bb
+,,Outbound
+,,,All,All, 0.0.0.0/0
+default,sg-07b5ab204c6e99909
+,,Inbound
+,,Outbound
+bastion-elb.dev.k8s.paainfra.io,sg-09f501317d9e3481c
+,,Inbound
+,,,tcp,22,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-add6fdb63cb6411e997ec02665088a8b,sg-0d600ce8382eafbd0
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a9132bb6ccb6711e9b4a2068013402cc,sg-0da2bea752ddee9cc
+,,Inbound
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-a4629abcbcb1f11e9b4a2068013402cc,sg-0e4940ca77df7b25f
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
+bastion.dev.k8s.paainfra.io,sg-0e9f36fbbe3c9a8bb
+,,Inbound
+,,,tcp,22,sg-09f501317d9e3481c
+,,Outbound
+,,,All,All, 0.0.0.0/0
+k8s-elb-ab9a037cecb1e11e9b4a2068013402cc,sg-0f67e711c305dca96
+,,Inbound
+,,,tcp,80,0.0.0.0/0
+,,,icmp,4,0.0.0.0/0
+,,,tcp,443,0.0.0.0/0
+,,Outbound
+,,,All,All, 0.0.0.0/0
