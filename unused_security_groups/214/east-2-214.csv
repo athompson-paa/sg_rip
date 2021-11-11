@@ -1,0 +1,9 @@
+bastion.dev.k8s.paainfra.io	sg-0e9f36fbbe3c9a8bb
+default	sg-07b5ab204c6e99909
+k8s-elb-a4629abcbcb1f11e9b4a2068013402cc	sg-0e4940ca77df7b25f
+k8s-elb-a5bb81079cb2111e9b4a2068013402cc	sg-044120391978d2fc6
+k8s-elb-ab9a037cecb1e11e9b4a2068013402cc	sg-0f67e711c305dca96
+k8s-elb-add6fdb63cb6411e997ec02665088a8b	sg-0d600ce8382eafbd0
+launch-wizard-1	sg-0045a8d61a80b5b4b
+masters.dev.k8s.paainfra.io	sg-013a5905294eb8cf5
+nodes.dev.k8s.paainfra.io	sg-073ee518753a453aa
